@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            h {
+                font-family: serif;
+            }
+
+            p, .myClass {
+                color: blue;
+                font-family: sans-serif;
+                font-size: 1.2em;
+
+            }
+
+            .otherClass {
+                background: lightblue;
+                text-align: right;
+                width: 50%;
+
+
+            }
+
+            .newClass{
+                color: red;
+                font-family: fantasy;
+                font-size: 0.8em;
+            }
+
+        </style>
+        <script type="text/javascript">
+
+            function reloadPage() {
+                window.location.reload();
+            }
+
+
+
+            // happy path - changes class members color and font settings 
+            // may not be most effecient approach 
+            // alters the actual class so it cannot be reset
+            function manipulate() {
+                var myClassItems = document.getElementsByClassName("myClass");
+
+                for (var i = 0; i < myClassItems.length; i++) {
+                    myClassItems[i].style.color = "green";
+                    myClassItems[i].style.fontFamily = "serif";
+                    myClassItems[i].style.fontSize = "1em";
+                }
+            }
+
+            // nasty path - trying to manipulate the array of class members instead of individually
+            function manipulate2() {
+                document.getElementsByClassName("myClass").style.color = "red";
+            }
+
+            // nasty path - only changes one of the items in the "myClassItems array"
+            // button must be clicked twice because the array updates itself after the class of the first item is changed?
+            function manipulate3() {
+                var myClassItems = document.getElementsByClassName("myClass");
+
+                for (var i = 0; i < myClassItems.length; i++)
+                {
+                    myClassItems[i].className = "newClass";
+                }
+            }
+
+            // nasty path - only changes one of the items in the "myClassItems array"
+            // button must be clicked twice because the array updates itself after the class of the first item is changed?
+            function manipulate4() {
+                var myClassItems = document.getElementsById("p1").classList;
+            }
+
+            // happy path - changes classes through a paragraph array
+            function manipulate5() {
+                var myParagraphs = document.getElementsByTagName("p");
+
+                myParagraphs[0].className = "newClass";
+                myParagraphs[2].className = "otherClass";
+            }
+
+
+        </script>
+
+    </head>
+    <body>
+        <h1> Manipulating css class properties with javascript </h1>
+        <br/>
+        <h2>In "myclass" </h2>
+
+        <p id="p1" class="myClass">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+            officia deserunt mollit anim id est laborum.
+        </p>
+        <br/>
+
+        <h2> <b>not</b> in "myclass" </h2>
+
+        <p id="p2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+            officia deserunt mollit anim id est laborum.
+
+        </p>
+        <br/>
+
+        <h2> in "myclass" </h2>
+        <p id="p3" class="myClass">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+            officia deserunt mollit anim id est laborum.
+
+        </p>
+
+        <button type="button" onclick="manipulate()"> Manipulate #1</button>
+        <button type="button" onclick="manipulate2()">Manipulate #2</button>
+        <button type="button" onclick="manipulate3()">Manipulate #3</button>
+        <button type="button" onclick="manipulate4()">Manipulate #4</button>
+        <button type="button" onclick="manipulate5()">Manipulate #5</button>
+        <button type="button" onclick="reloadPage()">Reload page</button>
+
+
+    </body>
+</html>
+
