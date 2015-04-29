@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head><meta charset="UTF-8"><title>CSS Animations</title>
+        <style type="text/css">
+        div {
+            //Good path if using internet explorer
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: sandbox;/*Standard Internet Explorer*/
+            animation-duration: 4s;/*Standard Internet Explorer*/
+            animation-iteration-count: infinite;
+            -webkit-animation-name: sandbox;/* Chrome, Safari, Opera */
+            -webkit-animation-duration: 4s;/* Chrome, Safari, Opera */
+        }
+           //Good Path for Internet Explorer
+            @keyframes sandbox {
+            from{background-color:red;}
+            to{background-color:blue;}
+        }
+           //Good path if using Chrome, Safari, Opera          
+            @-webkit-keyframes sandbox {
+            from {background-color: red;}
+            to {background-color: yellow;}
+        }
+            //Bad Path for Chrome, Safari, Opera
+            @keyframes sandbox {
+            from{background-color:red;}
+            to{background-color:blue;}
+            }
+           //Bad Path for Internet Explorer
+           @-webkit-keyframes sandbox {
+            from {background-color: red;}
+            to {background-color: yellow;}
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>
