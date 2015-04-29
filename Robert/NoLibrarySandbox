@@ -15,7 +15,7 @@
 
 
 //Not all websites can use this animation. Without the @webkit (which means that not all browsers can read the prorgam), browsers like Chrome or Opera can't run it even though the code is still correct!
--keyframes chameleon {
+@-keyframes chameleon {
    0% {background-color: green,}
    25% {background-color: blue,}
    50% {background-color: purple,}
