@@ -33,7 +33,7 @@ document.getElementById("collins").innerHTML = lanem
 function adam() {
 var a = parseFloat(document.getElementById("assante").html);
 var b = parseFloat(document.getElementById("burt").html);
-var coonrad = assante + burt;
+var coonrad = a + b;
 var lanem = twoCrazy(aa, bb, cc);
 document.getElementById("collins").innerHTML = lanem
 }
