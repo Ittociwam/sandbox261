@@ -4,12 +4,18 @@
 function yellow(){
 document.getElementById("p1").style.color = "yellow"
 }
+//changes paragraph background color to yellow.
 
 //this bad code won't work because the qoutes have been left off the id
 function changeColor(){
 document.getElementById(p1).style.color = "yellow"
 }
+//The function can't find the ID because it is incorrectly entered into the code.
 
+//this code is bad because the color isn't a color it is a name
+function changeColor(){
+document.getElementById("p1").style.color = "bob"
+//The code executes but changes nothing because there is no color entered into the change command.
 
 //This Good path uses in line javascript to program a button to change fontsize and color by clicking a button!
 <button type="button" onclick = "document.getElementById("h1").style.fontSize = 'larger'">Click This!</button>
@@ -17,3 +23,93 @@ document.getElementById(p1).style.color = "yellow"
 
 //This is bad code because you are not supposed to have a "-" in the font size command button.
 <button type = "button" onclick = "document.getElementById("h1").style.font-size = 'smaller'"> Click This! </button>
+//this will allow you to click the button but nothing happens.
+
+//This bad path will not execute the changes due to programming errors.
+<button type="button" onclick = "document.getElementById("h1").style.fontSize = 0">Click This!</button>
+//The font size does not change because 0 is not given a value to increment the change by.
+
+//This good code changes the size of the box
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition-property: width; /* Safari */
+    -webkit-transition-duration: 5s; /* Safari */
+    -webkit-transition-delay: 2s; /* Safari */
+    transition-property: width;
+    transition-duration: 5s;
+    transition-delay: 2s;
+}
+div:hover {
+    width: 300px;
+}
+//The box width changes from 100px to 300px
+
+//This nasty code uses a negative width number
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition-property: width; /* Safari */
+    -webkit-transition-duration: 5s; /* Safari */
+    -webkit-transition-delay: 2s; /* Safari */
+    transition-property: width;
+    transition-duration: 5s;
+    transition-delay: 2s;
+}
+div:hover {
+    width: -100px;
+}
+//The code does not run because it can not change the div to a negative width
+
+//This code is pretty nasty, it uses a 0 width.
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition-property: width; /* Safari */
+    -webkit-transition-duration: 5s; /* Safari */
+    -webkit-transition-delay: 2s; /* Safari */
+    transition-property: width;
+    transition-duration: 5s;
+    transition-delay: 2s;
+}
+div:hover {
+    width: 0px;
+}
+//The box shrinks to about 5px but does not completely dissapear.
+
+//This nasty code uses "null" for the changing width
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition-property: width; /* Safari */
+    -webkit-transition-duration: 5s; /* Safari */
+    -webkit-transition-delay: 2s; /* Safari */
+    transition-property: width;
+    transition-duration: 5s;
+    transition-delay: 2s;
+}
+div:hover {
+    width: null;
+}
+//The program does not run because it views the "width change" as being non-existant
+
+//This code is bad as it takes the duration in infinite
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition-property: width; /* Safari */
+    -webkit-transition-duration: 5s; /* Safari */
+    -webkit-transition-delay: 2s; /* Safari */
+    transition-property: width;
+    transition-duration:infinite;
+    transition-delay: 2s;
+}
+div:hover {
+    width: 500px;
+}
+//This div does not stay the length, it changes back after a little bit of timee
