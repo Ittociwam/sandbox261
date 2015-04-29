@@ -1,0 +1,56 @@
+//Sandbox code for CSS3 Animations to Design, Define, and Trigger
+
+//this Sandbox code changes colors in an animation for Chrome, Safari, and Opera.
+@-webkit-keyframes chameleon {
+   0% {background-color: green,}
+   25% {background-color: blue,}
+   50% {background-color: purple,}
+   75% {background-color: yellow,}
+   100% {background-color: red,}
+}
+#lizard
+    animation-name: chameleon;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+
+//Not all websites can use this animation. Without the @webkit (which means that not all browsers can read the prorgam), browsers like Chrome or Opera can't run it even though the code is still correct!
+-keyframes chameleon {
+   0% {background-color: green,}
+   25% {background-color: blue,}
+   50% {background-color: purple,}
+   75% {background-color: yellow,}
+   100% {background-color: red,}
+}
+#lizard
+    animation-name: chameleon;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+
+//this Sandbox code changes the location and color of a div for Chrome, Safari, and Opera. But not for Firefox or Internet Explorer 9.0 and below
+@webkit-keyframes catchMeIfYouCan {
+	0% {background-color: yellow; left: 0px; top: 0px;}
+	25% {background-color: blue; left: 200px; top: 0px;}
+	50% {background-color: red; left: 0px; top: 200px;}
+	75% {background-color: orange; left: 200px; top: 200px;}
+	100% {background-color: white; left: 0px; top: 0px;}
+	}
+#runner
+	animation-name: catchMeIfYouCan;
+	animation-delay: 120s;
+	animation-duration: 60s;
+	animation-iteration-count: 1;
+
+//The Following is correctly written so that Mozilla/Firefox can work the animation
+@-moz-keyframes chameleon {
+   0% {background-color: green,}
+   25% {background-color: blue,}
+   50% {background-color: purple,}
+   75% {background-color: yellow,}
+   100% {background-color: red,}
+}
+#lizard
+    animation-name: chameleon;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
