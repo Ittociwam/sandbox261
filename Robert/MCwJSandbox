@@ -1,0 +1,19 @@
+//Sandbox Code for Manipulating CSS Class Properties Using JavaScript
+
+//This Good code runs a function that changes all id'd paragraphs "p1" to yellow font.
+function yellow(){
+document.getElementById("p1").style.color = "yellow"
+}
+
+//this bad code won't work because the qoutes have been left off the id
+function changeColor(){
+document.getElementById(p1).style.color = "yellow"
+}
+
+
+//This Good path uses in line javascript to program a button to change fontsize and color by clicking a button!
+<button type="button" onclick = "document.getElementById("h1").style.fontSize = 'larger'">Click This!</button>
+<button type="button" onclick = "document.getElementById("h1").style.color = 'red'">Also This One!</button>
+
+//This is bad code because you are not supposed to have a "-" in the font size command button.
+<button type = "button" onclick = "document.getElementById("h1").style.font-size = 'smaller'"> Click This! </button>
