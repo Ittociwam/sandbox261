@@ -1,1 +1,31 @@
 <h1> hello </h1>
+function add() {
+	var listA = [ 3, 4, 5, 6, 7, 8 ];
+	var middle = getMiddle(listA);
+
+	document.getElementById('display').innerHTML = middle;
+
+}
+
+function getMiddle(list) {
+
+	var i = list.length;
+
+	var med = i % 2;
+	
+	if (med > 0) {
+		med = i/2-.5;
+		med = list[med];
+		return med;
+	}
+	else {
+	var medDos = i/2;
+	var medUno = medDos - 1;
+	med = (list[medUno]+list[medDos])/2;
+	return med;
+	}
+	
+
+return med;
+
+}
