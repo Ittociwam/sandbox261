@@ -20,7 +20,7 @@ window.alert("MAN YOU ARE OLD!!! Your heart rate should be between " + minHeart 
 
 //Sand Box for Variables, Parameters, Arrays and Associative Arrays
 
-//This bad Code for generating random names, rather than pulling the variables, it pulls the inside HTML instead of the variable.
+//This is bad code for variables and functoins. It pulls the the in text ID's instead fo the variables they are converted too.
 function adam() {
 var a = parseFloat(document.getElementById("assante").html);
 var b = parseFloat(document.getElementById("burt").html);
@@ -29,7 +29,7 @@ var lanem = twoCrazy(aa, bb, cc);
 document.getElementById("collins").innerHTML = lanem
 }
 
-//This is good code for generating random names.
+//This is good code for functions, arrays, and associative arrays.
 function adam() {
 var a = parseFloat(document.getElementById("assante").html);
 var b = parseFloat(document.getElementById("burt").html);
