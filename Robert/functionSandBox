@@ -1,0 +1,69 @@
+//Sand Box for Loops, Conditional Statements, & Functions
+
+//This Happy Code Tells Me If you should be working out at your age and what your heart rate should be.
+function heartRate(){
+for (i = 0; i < age; i++) {
+}
+if (i <= 5) {
+window.alert("You are too young to be worrying about this!");
+}
+else if (i > 5 && i < 86){
+aa = age
+maxHeart = aa * .65;
+minHeart = aa * .85;
+window.alert("Your heart rate should be between " + minHeart + " and " + maxHeart ".");
+}
+else (i >= 86) {
+window.alert("MAN YOU ARE OLD!!! Your heart rate should be between " + minHeart + " and " + maxHeart ".");
+}
+}
+
+//Sand Box for Variables, Parameters, Arrays and Associative Arrays
+
+//This Happy Code for generating random names
+function adam() {
+var a = parseFloat(document.getElementById("assante").html);
+var b = parseFloat(document.getElementById("burt").html);
+var coonrad = assante + burt;
+var lanem = twoCrazy(aa, bb, cc);
+document.getElementById("collins").innerHTML = lanem
+}
+
+function twoCrazy (aa, bb, cc) {
+var first = ["Super", "Man", "47", "Outstanding", "Ironman", "30", "Fantastic", "Four", "4", ""];
+var last = ["Rap", "God", "Eminem", "Reggae", "Bob", "420", "Milk", "Man", "Aquabats", ""];
+var firstName = first[aa];
+var lastName = last[cc];
+if (bb >= 6) {
+var middle = "The";
+return middle;
+}
+else (bb <=5) {
+var middle = "";
+return middle;
+var fullName = "The " + firstName +  middle  + lastName ".";
+}
+
+function crazy (a, b, coonrad){
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+if (a > list.length) {
+window.alert("That does not work!!!)
+}
+else {
+var aa = numbers[a]
+return aa
+}
+if (b > list.length) {
+window.alert("That does not work!!!)
+}
+else {
+var bb = numbers[b]
+return bb
+}
+if (coonrad > list.length) {
+window.alert("That does not work!!!)
+}
+else {
+var cc = numbers[coonrad]
+return cc
+}
