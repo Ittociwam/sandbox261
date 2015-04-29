@@ -1,33 +1,4 @@
-//Sand Box for Loops, Conditional Statements, & Functions
-
-//This Happy Code Tells Me If you should be working out at your age and what your heart rate should be.
-function heartRate(){
-for (i = 0; i < age; i++) {
-}
-if (i <= 5) {
-window.alert("You are too young to be worrying about this!");
-}
-else if (i > 5 && i < 86){
-aa = age
-maxHeart = aa * .65;
-minHeart = aa * .85;
-window.alert("Your heart rate should be between " + minHeart + " and " + maxHeart ".");
-}
-else (i >= 86) {
-window.alert("MAN YOU ARE OLD!!! Your heart rate should be between " + minHeart + " and " + maxHeart ".");
-}
-}
-
-//Sand Box for Variables, Parameters, Arrays and Associative Arrays
-
-//This is bad code for variables and functoins. It pulls the the in text ID's instead fo the variables they are converted too.
-function adam() {
-var a = parseFloat(document.getElementById("assante").html);
-var b = parseFloat(document.getElementById("burt").html);
-var coonrad = assante + burt;
-var lanem = twoCrazy(aa, bb, cc);
-document.getElementById("collins").innerHTML = lanem
-}
+//SANDBOX FOR FUNCTIONS
 
 //This is good code for functions, arrays, and associative arrays.
 function adam() {
@@ -37,42 +8,132 @@ var coonrad = a + b;
 var lanem = twoCrazy(aa, bb, cc);
 document.getElementById("collins").innerHTML = lanem
 }
+//it converts the ID's to variables to be used in an equation.
 
-function twoCrazy (aa, bb, cc) {
-var first = ["Super", "Man", "47", "Outstanding", "Ironman", "30", "Fantastic", "Four", "4", ""];
-var last = ["Rap", "God", "Eminem", "Reggae", "Bob", "420", "Milk", "Man", "Aquabats", ""];
-var firstName = first[aa];
-var lastName = last[cc];
-if (bb >= 6) {
-var middle = "The";
-return middle;
+//This is bad code for variables and functoins. It pulls the the in text ID's instead fo the variables they are converted too.
+function adam() {
+var a = parseFloat(document.getElementById("assante").html);
+var b = parseFloat(document.getElementById("burt").html);
+var coonrad = assante + burt;
+var lanem = twoCrazy(aa, bb, cc);
+document.getElementById("collins").innerHTML = lanem
 }
-else (bb <=5) {
-var middle = "";
-return middle;
-var fullName = "The " + firstName +  middle  + lastName ".";
-}
+//it calls the ID's instead of the converted variables and stops the progam
 
-function crazy (a, b, coonrad){
-var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-if (a > list.length) {
-window.alert("That does not work!!!)
+//This is good code for functions.
+function adam() {
+var a = parseFloat(document.getElementById("assante").html);
+var b = parseFloat(document.getElementById("burt").html);
+var coonrad = a + b;
+document.getElementById("collins").innerHTML = coonrad
 }
-else {
-var aa = numbers[a]
-return aa
+//The parseFloat converts the numbers (decimal or not) to a usable number for the equation.
+
+//This is bad code for functions.
+function adam() {
+var a = parseInt(document.getElementById("assante").html);
+var b = parseFloat(document.getElementById("burt").html);
+var coonrad = a + b;
+document.getElementById("collins").innerHTML = coonrad
 }
-if (b > list.length) {
-window.alert("That does not work!!!)
+//The parseInt and parseFloat cause a running error because the var coonrad cannot add the two different types of data.
+
+//This is bad code for functions. It uses two parseInt.
+function adam() {
+var a = parseInt(document.getElementById("assante").html);
+var b = parseInt(document.getElementById("burt").html);
+var coonrad = a + b;
+var lanem = twoCrazy(aa, bb, cc);
+document.getElementById("collins").innerHTML = lanem
 }
-else {
-var bb = numbers[b]
-return bb
+//The code will still run, but the program is based on user input. If the user inputs a decimal, it will not give the correct answer.
+
+
+//SANDBOX FOR VARIABLES
+
+//This is good code for variables being used to fill an ID
+<p id="demo"></p>
+<script>
+var hero = "Superman";
+document.getElementById("demo").innerHTML = hero;
+</script>
+//the ID'd paragraph pulls out the value of variable hero to create the text for a paragraph.
+
+//This bad code takes the value in qoutes of the variable and uses it to fill the paragraph
+<p id="demo"></p>
+<script>
+var hero = "Superman";
+document.getElementById("demo").innerHTML = "Superman";
+</script>
+//This makes it pointless to have the variable because it reads superman out of the qoutes instead of the variable.
+
+//Nasty code for variables that tries the value of the variable out of qoutes
+<p id="demo"></p>
+<script>
+var hero = "Superman";
+document.getElementById("demo").innerHTML = Superman;
+</script>
+//This causes the script to run an error and not fill the paragraph becaue it is trying to find a variable names "Superman".
+
+//This nasty code uses a different ID than the ones in the code.
+<p id="hero"></p>
+<script>
+var hero = "Superman";
+document.getElementById("demo").innerHTML = hero;
+</script>
+//Javascript has no where to output the item because the ID in the output command does not match the ID's in the body of the paragraph
+
+//This is good code that pulls the variables from the inner document and applies them to the code.
+var a = document.getElementById("userInput").html
+var b = a + " is a nice person."
+document.getElementById("output").innerHTML = b
+//the code recieves input form the user and then prints a message based on the input.
+
+//The is nasty code that excludes the qoutes in get ElementById the first time.
+var a = document.getElementById(userInput).html
+var b = a + " is a nice person."
+document.getElementById("output").innerHTML = b
+//This code will not output a code because it cannot find the ID'd information for variable a. the same thing would happen for the output if the qoutes were removed there.
+
+//This nasty code calls the ID for the message
+var a = document.getElementById("userInput").html
+var b = userInput + " is a nice person."
+document.getElementById("output").innerHTML = b
+//The code will not output because it cannot find the variable "userInput" which does not exist.
+
+
+//SANDBOX FOR LOOPS
+
+//This is good code for a loop using an array.
+var cars = ["BMW", "Volvo", "Saab", "Ford"];
+var i;
+for (i = 0, l = cars.length, text = ""; i < l; i++) {
+    text += cars[i] + "<br>";
 }
-if (coonrad > list.length) {
-window.alert("That does not work!!!)
+document.getElementById("demo").innerHTML = text;
+//this code will output a list of cars in the array until the array is over.
+
+//This is nasty code for an adding loop.
+for (i = 0, text = "", i++) {
+    text += i + "<br>";
 }
-else {
-var cc = numbers[coonrad]
-return cc
+document.getElementById("demo").innerHTML = text;
+//This code will continually add because it has no ending point, thus continually outputting the string of numbers.
+
+//This nasty code does not tell the code tos top in the array
+var cars = ["BMW", "Volvo", "Saab", "Ford"];
+var i;
+for (i = 0, text = ""; i++) {
+    text += cars[i] + "<br>";
 }
+document.getElementById("demo").innerHTML = text;
+//This code will output the appropriate list, however it will continue to run looking through arrays putting out "null" or "NA" where a value should be but does not exist.
+
+
+//SANDBOX FOR CONDITIONAL STATEMENTS
+
+//SANDBOX FOR PARAMETERS
+
+//SANDBOX FOR ARRAYS
+
+//SANDBOX FOR ASSOCIATIVE ARRAYS
