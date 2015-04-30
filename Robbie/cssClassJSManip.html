@@ -57,14 +57,35 @@
                 
                 for (var i = 0; i < myClassItems.length; i++)
                 {
-                    myClassItems[i].className = "newClass";
+                    myClassItems[i].className = "otherClass";
+                    //only alters 1 item of myClassItems
                 }
                 
-                // happy path - changes classes through a paragraph array
+                // nasty path - only changes center divs font style to newClass. The rest is not changed. 
                 var mydivs = document.getElementsByTagName("div");
+                window.alert(254);
+                window.alert(mydivs.length);
                 mydivs[0].className = "newClass";
-                mydivs[2].className = "otherClass";
-                mydivs[1].style.color = "red";
+                mydivs[1].className = "newClass";
+                mydivs[2].className = "newClass";
+
+                var myClassItems = document.getElementsByClassName("newClass");
+
+                window.alert(myClassItems.length);
+
+                //nasty path - nothing changes 
+                myClassItems[0].style.color = 32;
+
+                //nasty path - changes fonts blue for div0 and div2 but rightly adjusts div1 to 345px
+                try{
+                //myClassItems[0].style.width = 50%;
+                //throws Uncaught SyntaxError: Unexpected token ILLEGAL
+                }
+                catch(e){
+                    // does not catch the syntax error thrown above
+                }
+                //myClassItems[1].style.height -23px;
+
             }
 
 
