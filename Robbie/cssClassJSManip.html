@@ -39,52 +39,62 @@
                     myClassItems[i].style.fontFamily = "serif";
                     myClassItems[i].style.fontSize = "1em";
                 }
-                
-                try{
-                 // nasty path - trying to manipulate the array of class members instead of individually         
-        document.getElementsByClassName("myClass").style.color = "red";
-                 //throws Uncaught TypeError: Cannot set property 'color' of undefined
-             }
-             catch(e)
-             {
-                 
-             }
-                 
-                 
+
+                try {
+                    // nasty path - trying to manipulate the array of class members instead of individually         
+                    document.getElementsByClassName("myClass").style.color = "red";
+                    //throws Uncaught TypeError: Cannot set property 'color' of undefined
+                }
+                catch (e)
+                {
+
+                }
+
+
                 // nasty path - only changes one of the items in the "myClassItems array"
                 // button must be clicked twice because the array updates itself after the class of the first item is changed?
                 var myClassItems = document.getElementsByClassName("myClass");
-                
+
                 for (var i = 0; i < myClassItems.length; i++)
                 {
                     myClassItems[i].className = "otherClass";
                     //only alters 1 item of myClassItems
                 }
-                
+
                 // nasty path - only changes center divs font style to newClass. The rest is not changed. 
                 var mydivs = document.getElementsByTagName("div");
-                window.alert(254);
-                window.alert(mydivs.length);
+                //window.alert(254);
+                //window.alert(mydivs.length);
                 mydivs[0].className = "newClass";
                 mydivs[1].className = "newClass";
                 mydivs[2].className = "newClass";
 
                 var myClassItems = document.getElementsByClassName("newClass");
 
-                window.alert(myClassItems.length);
-
                 //nasty path - nothing changes 
                 myClassItems[0].style.color = 32;
 
-                //nasty path - changes fonts blue for div0 and div2 but rightly adjusts div1 to 345px
-                try{
-                //myClassItems[0].style.width = 50%;
-                //throws Uncaught SyntaxError: Unexpected token ILLEGAL
-                }
-                catch(e){
-                    // does not catch the syntax error thrown above
-                }
-                //myClassItems[1].style.height -23px;
+                //happy path - changes first divs width to 50%
+                myClassItems[0].style.width = "50%";
+                //note: if 50% is not in quotes this throws a syntax error
+
+                //nasty path - changes nothing
+                myClassItems[1].style.height = "abcd";
+
+                //nasty path - changes nothing
+                myClassItems[1].style.height = "-23%";
+
+                //nasty path - changes nothing
+                myClassItems[0].style.width = "=-1px";
+                //note: if a property is chamged to an invalid value the rule wont apply
+
+                //happy path - moves the text exactly where I want it
+                myClassItems[1].style.position = "absolute";
+                myClassItems[1].style.top = "150px";
+                myClassItems[1].style.left = "150px";
+
+                // nasty path - div is moved off screen (this could be a desired result I suppose)
+                myClassItems[1].style.left = "-500px";
 
             }
 
