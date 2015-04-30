@@ -29,3 +29,29 @@ function getMiddle(list) {
 return med;
 
 }
+
+//code returns NaN with null array
+function getMiddle(list) {
+
+	var i = Null;
+
+	var med = i % 2;
+	
+	if (med > 0) {
+		med = i/2-.5;
+		med = list[med];
+		return med;
+	}
+	else {
+	var medDos = i/2;
+	var medUno = medDos - 1;
+	med = (list[medUno]+list[medDos])/2;
+	return med;
+	}
+	
+
+return med;
+
+}
+
+//
