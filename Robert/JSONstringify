@@ -1,0 +1,112 @@
+//SANDBOX FOR JSON
+
+//This is a clean JSON code.
+{"employees":[
+    {"firstName":"John", "lastName":"Doe"},
+    {"firstName":"Anna", "lastName":"Smith"},
+    {"firstName":"Peter", "lastName":"Jones"}
+]}
+//This code stores three arrays as an object to be pulled from in HTML.
+
+
+//This is a nasty code that won't allow the arrays to work.
+{"employees":[
+    {firstName:"John", lastName:"Doe"},
+    {firstName:"Anna", lastName:"Smith"},
+    {firstName:"Peter", lastName:"Jones"}
+]}
+//This code will not allow you to call or store the array because there is no qoutes around the array keys.
+
+//This is another good code for JSon
+<script>
+var text = '{"name":"John Johnson","street":"Oslo West 16","phone":"555 1234567"}'
+
+var obj = JSON.parse(text);
+
+document.getElementById("demo").innerHTML =
+obj.name + "<br>" +
+obj.street + "<br>" +
+obj.phone;
+</script>
+//This code will outpute an address label with name, street, and phone number
+
+
+//This nasty code for JSon
+<script>
+var text = '{"name":John Johnson,"street":"Oslo West 16","phone":"555 1234567"}'
+
+var obj = JSON.parse(text);
+
+document.getElementById("demo").innerHTML =
+obj.name + "<br>" +
+obj.street + "<br>" +
+obj.phone;
+</script>
+//This code will not output because the string in the array has no qoutes and won't allow the output to print. It doesn't matter where it is removed.
+
+//Nasty Code adding an undefined value
+<script>
+var text = '{"name":"John Johnson","street":"Oslo West 16","phone":"555 1234567"}'
+
+var obj = JSON.parse(text);
+
+document.getElementById("demo").innerHTML =
+obj.name + "<br>" +
+obj.street + "<br>" +
+obj.phone + "<br>" +
+obj.phoneName;
+</script>
+//This gives an "undefined" output for the obj.phoneName because it is not in the string.
+
+//Nasty Code adding an undefined value
+<script>
+var text = '{"name":"John Johnson","street":"Oslo West 16","phone":"555 1234567"}'
+
+var obj = JSON.parse(text);
+
+document.getElementById("demo").innerHTML =
+obj.name + "<br>" +
+obj.street + "<br>" +
+obj.phone + "<br>" +
+obj.1271332;
+</script>
+//This won't allow the code to output because it has an object key that is not only undefined, but it is not a string
+
+//Nasty Code adding an undefined value
+<script>
+var text = '{"name":"John Johnson","street":"Oslo West 16","phone":"555 1234567"}'
+
+var obj = JSON.parse(text);
+
+document.getElementById("demo").innerHTML =
+obj.name + "<br>" +
+obj.street + "<br>" +
+obj.phone;
+</script>
+//This won't allow the code to output because it has an object key that is not only undefined, but it is not a string
+
+//Nasty code that uses numbers for keys
+<script>
+var text = '{"0":"John Johnson","1":"Oslo West 16","2":"555 1234567"}'
+
+var obj = JSON.parse(text);
+
+document.getElementById("demo").innerHTML =
+obj.name + "<br>" +
+obj.address + "<br>" +
+obj.phone;
+</script>
+//This one gives all undefined values becuase the keys do not match
+
+//More nasty code!
+<script>
+var text = '{"0":"John Johnson","1":"Oslo West 16","2":"555 1234567"}'
+
+var obj = JSON.parse(text);
+
+document.getElementById("demo").innerHTML =
+obj.0 + "<br>" +
+obj.1 + "<br>" +
+obj.2;
+</script>
+//This one does not work because  because you can't use numbers for keys, it hs to be a string.
