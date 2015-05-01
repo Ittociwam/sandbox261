@@ -115,3 +115,24 @@ div:hover {
 //This div does not stay the length, it changes back after a little bit of timee
 
 //Things I learned in Class
+//This code, while it looks nice, is actually nasty!
+ function manipulate() {
+                var myClassItems = document.getElementsByClassName("myClass");
+                for (var i = 0; i < myClassItems.length; i++) {
+                    myClassItems[i].style.color = "green";
+                    myClassItems[i].style.fontFamily = "serif";
+                    myClassItems[i].style.fontSize = "1em";
+                }
+//This changes the array every time it changes the class in the document. So it will skip some items in the array.
+
+ function manipulate() {
+                var myClassItems = document.getElementsByClassName("myClass");
+                //first solution to the nasty code above it to make the array add 0 to i every time keeping the array at the start.
+                for (var i = 0; i < myClassItems.length; i += 0) {
+                //second solution is to do a while loop that keeps things on the first
+                while (var i = 0; i < myClassItems.length) {
+                    myClassItems[i].style.color = "green";
+                    myClassItems[i].style.fontFamily = "serif";
+                    myClassItems[i].style.fontSize = "1em";
+                }
+//See solution comments above!
