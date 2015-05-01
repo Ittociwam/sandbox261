@@ -9,7 +9,7 @@
 
             p, .myClass {
                 color: blue;
-                font-family: sans-serif;
+                font-family: serif;
                 font-size: 1.2em;
             }
 
@@ -54,11 +54,12 @@
                 // nasty path - only changes one of the items in the "myClassItems array"
                 // button must be clicked twice because the array updates itself after the class of the first item is changed?
                 var myClassItems = document.getElementsByClassName("myClass");
-
+                window.alert(myClassItems.length);
                 for (var i = 0; i < myClassItems.length; i++)
                 {
+                    //window.alert(myClassItem[i].className.toString());
                     myClassItems[i].className = "otherClass";
-                    //only alters 1 item of myClassItems
+                    //only alters 2 items of myClassItems
                 }
 
                 // nasty path - only changes center divs font style to newClass. The rest is not changed. 
@@ -117,7 +118,7 @@
         </div>
         <br/>
 
-        <div id="d2" class="otherClass">
+        <div id="d2" class="myClass">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
