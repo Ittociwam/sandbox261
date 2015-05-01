@@ -9,16 +9,6 @@ document.getElementById("collins").innerHTML = lanem
 }
 //it converts the ID's to variables to be used in an equation.
 
-//This is bad code for variables and functoins. It pulls the the in text ID's instead fo the variables they are converted too.
-function adam() {
-var a = parseFloat(document.getElementById("assante").html);
-var b = parseFloat(document.getElementById("burt").html);
-var coonrad = assante + burt;
-var lanem = twoCrazy(aa, bb, cc);
-document.getElementById("collins").innerHTML = lanem
-}
-//it calls the ID's instead of the converted variables and stops the progam
-
 //This is good code for functions.
 function adam() {
 var a = parseFloat(document.getElementById("assante").html);
@@ -27,25 +17,6 @@ var coonrad = a + b;
 document.getElementById("collins").innerHTML = coonrad
 }
 //The parseFloat converts the numbers (decimal or not) to a usable number for the equation.
-
-//This is bad code for functions.
-function adam() {
-var a = parseInt(document.getElementById("assante").html);
-var b = parseFloat(document.getElementById("burt").html);
-var coonrad = a + b;
-document.getElementById("collins").innerHTML = coonrad
-}
-//The parseInt and parseFloat cause a running error because the var coonrad cannot add the two different types of data.
-
-//This is bad code for functions. It uses two parseInt.
-function adam() {
-var a = parseInt(document.getElementById("assante").html);
-var b = parseInt(document.getElementById("burt").html);
-var coonrad = a + b;
-var lanem = twoCrazy(aa, bb, cc);
-document.getElementById("collins").innerHTML = lanem
-}
-//The code will still run, but the program is based on user input. If the user inputs a decimal, it will not give the correct answer.
 
 
 //SANDBOX FOR VARIABLES
@@ -57,47 +28,12 @@ document.getElementById("demo").innerHTML = hero;
 </script>
 //the ID'd paragraph pulls out the value of variable hero to create the text for a paragraph.
 
-//This bad code takes the value in qoutes of the variable and uses it to fill the paragraph
-<p id="demo"></p>
-<script>
-var hero = "Superman";
-document.getElementById("demo").innerHTML = "Superman";
-</script>
-//This makes it pointless to have the variable because it reads superman out of the qoutes instead of the variable.
-
-//Nasty code for variables that tries the value of the variable out of qoutes
-<p id="demo"></p>
-<script>
-var hero = "Superman";
-document.getElementById("demo").innerHTML = Superman;
-</script>
-//This causes the script to run an error and not fill the paragraph becaue it is trying to find a variable names "Superman".
-
-//This nasty code uses a different ID than the ones in the code.
-<p id="hero"></p>
-<script>
-var hero = "Superman";
-document.getElementById("demo").innerHTML = hero;
-</script>
-//Javascript has no where to output the item because the ID in the output command does not match the ID's in the body of the paragraph
-
 //This is good code that pulls the variables from the inner document and applies them to the code.
 var a = document.getElementById("userInput").html
 var b = a + " is a nice person."
 document.getElementById("output").innerHTML = b
 //the code recieves input form the user and then prints a message based on the input.
 
-//The is nasty code that excludes the qoutes in get ElementById the first time.
-var a = document.getElementById(userInput).html
-var b = a + " is a nice person."
-document.getElementById("output").innerHTML = b
-//This code will not output a code because it cannot find the ID'd information for variable a. the same thing would happen for the output if the qoutes were removed there.
-
-//This nasty code calls the ID for the message
-var a = document.getElementById("userInput").html
-var b = userInput + " is a nice person."
-document.getElementById("output").innerHTML = b
-//The code will not output because it cannot find the variable "userInput" which does not exist.
 
 
 //SANDBOX FOR LOOPS
@@ -109,22 +45,6 @@ for (i = 0, l = cars.length, text = ""; i < l; i++) {
 }
 document.getElementById("demo").innerHTML = text;
 //this code will output a list of cars in the array until the array is over.
-
-//This is nasty code for an adding loop.
-for (i = 0, text = "", i++) {
-    text += i + "<br>";
-}
-document.getElementById("demo").innerHTML = text;
-//This code will continually add because it has no ending point, thus continually outputting the string of numbers.
-
-//This nasty code does not tell the code tos top in the array
-var cars = ["BMW", "Volvo", "Saab", "Ford"];
-var i;
-for (i = 0, text = ""; i++) {
-    text += cars[i] + "<br>";
-}
-document.getElementById("demo").innerHTML = text;
-//This code will output the appropriate list, however it will continue to run looking through arrays putting out "null" or "NA" where a value should be but does not exist.
 
 
 //SANDBOX FOR CONDITIONAL STATEMENTS
@@ -142,48 +62,6 @@ function myFunction() {
 document.getElementById("demo").innerHTML = greeting;
 //this code will output a clean little greeting for you based on the time you input
 
-//This nasty code forgets to define the var greeting
-function myFunction() {
-    var time = new Date().getHours();
-    if (time < 10) {
-        greeting = "Good morning";
-    } else if (time < 20) {
-        greeting = "Good day";
-    } else {
-        greeting = "Good evening";
-    }
-document.getElementById("demo").innerHTML = greeting;
-//This code will still output a greeting because the script still has an output value. However, it could cause confusion in larger codes.
-
-//This is nasty code
-function myFunction() {
-    var greeting;
-    if (time < 10) {
-        greeting = "Good morning";
-    } else if (time < 20) {
-        greeting = "Good day";
-    } else {
-        greeting = "Good evening";
-    }
-document.getElementById("demo").innerHTML = greeting;
-//Without a time definition, you do not get any output because it has no variable to compare it too.
-
-//This is nasty code
-function myFunction() {
-    var greeting;
-    var time = new Date().getHours();
-    if (time < 10) {
-        greeting = "Good morning";
-    } else if (time < 20) {
-        greeting = "Good day";
-    } else if {
-        greeting = "What time is it?";
-    } else {
-        greeting = "Good evening";
-    }
-document.getElementById("demo").innerHTML = greeting;
-//This code will not run because it has an undefined "else if" causing the code to break.
-
 
 //SANDBOX FOR PARAMETERS
 //This is a nice code for Parameters
@@ -196,52 +74,6 @@ var e = document.getElementById("birthday").html);
 var f = theMessage(a, b, c, d, e);
 document.getElementById("output").innerHTML = f;
 }
-function theMessage (a, b, c, d, e){
-var messageOne = "Good Morning! I happen to have stolen your information!";
-var messageTwo = "See? Here is your age " + b + ". Your social security " + c + ". Oh and here is your birthday and Mother's Maiden name: " + d + " and " + e + ".";
-var close = a + "Sorry Bro! You are out of luck!";
-var full = messageOne + messageTwo + close;
-return full;
-}
-//This code will take the informatoin from stealingInfo and places it in theMessage which returns the output.
-
-//This is a nasty code for Parameters
-function stealingInfo {
-var a = document.getElementById("yourName").html;
-var b = parseFloat(document.getElementById("yourAge").html);
-var c = parseFloat(document.getElementById("yourSoc").html);
-var d = document.getElementById("mothersMaiden").html);
-var e = document.getElementById("birthday").html);
-var f = theMessage(a, b, c, d, e);
-document.getElementById("output").innerHTML = f;
-}
-function theMessage (a, b, c, d, e){
-var messageOne = "Good Morning! I happen to have stolen your information!";
-var messageTwo = "See? Here is your social security " + c + ". Oh and here is your birthday and Mother's Maiden name: " + d + " and " + e + ".";
-var close = "Sorry Bro! You are out of luck!";
-var full = messageOne + messageTwo + close;
-return full;
-}
-//The parameters doesn't use all the passed on parameters, and while it can still output the message, it has to much information to work with.
-
-//This is a nasty code for Parameters
-function stealingInfo {
-var a = document.getElementById("yourName").html;
-var b = parseFloat(document.getElementById("yourAge").html);
-var c = parseFloat(document.getElementById("yourSoc").html);
-var d = document.getElementById("mothersMaiden").html);
-var e = document.getElementById("birthday").html);
-var f = theMessage();
-document.getElementById("output").innerHTML = f;
-}
-function theMessage (a, b, c, d, e){
-var messageOne = "Good Morning! I happen to have stolen your information!";
-var messageTwo = "See? Here is your age " + b + ". Your social security " + c + ". Oh and here is your birthday and Mother's Maiden name: " + d + " and " + e + ".";
-var close = a + "Sorry Bro! You are out of luck!";
-var full = messageOne + messageTwo + close;
-return full;
-}
-//This code passes no parameters and thuse leaves the values empty in the code output.
 
 
 //SANDBOX FOR ARRAYS
@@ -250,25 +82,10 @@ var cars = ["Saab", "Volvo", "BMW"];
 document.getElementById("demo").innerHTML = cars[0];
 //This code pulls the first item in the array (assigned the value 0) and pulls it out into the output.
 
-//This is nasty code for arrays
-var cars = ["Saab", "Volvo", "BMW"];
-document.getElementById("demo").innerHTML = cars[3];
-//This code asks for one number longer than the array, becuase it does not exist, it outputs a "underfined" statement.
-
-//This is nasty code for arrays
-var cars = ["Saab", "Volvo", "BMW"];
-document.getElementById("demo").innerHTML = list[1];
-//This code does not work because rather than calling for the appropriate array name it asks for a list but can't pull it appropriately.
-
 //This is a good code for counting the arrays
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 document.getElementById("demo").innerHTML = fruits.length;
 //This code will count the number of items in the array and tell you how many there are.
-
-//This is a nasty code for counting arrays
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-document.getElementById("demo").innerHTML = fruits.length[0];
-//The code does not know what to do by adding the "0" to the count command so it outputs the "underfined" command.
 
 
 //SANDBOX FOR ASSOCIATIVE ARRAYS
@@ -287,18 +104,3 @@ console.log(this.toadEye);
 worldHunger.toadEye = "ribbit";
 worldHunger();
 //worldHunger was assinged toadEye which pulled "ribbit" to the output.
-
-//This is nasty code for associative arrays
-var person = {firstName:"John", lastName:"Doe", age:46};
-document.getElementById("demo").innerHTML = person["firstAge"];
-//This code outputs undefined because there is not key called "firstAge".
-
-//This is nasty code for associative arrays
-var person = {firstName:"John", lastName:"Doe", age:46};
-document.getElementById("demo").innerHTML = person[46];
-//This code outputs undefined because the code does not search the defined keys, but searches for the key itself and there is no key 46
-
-//This is nasty code for associative arrays
-var person = {firstName:"John", lastName:"Doe", age:46};
-document.getElementById("demo").innerHTML = person.length;
-//This code outputs undefined when trying to use the ".length" command because it doesn't recongnize the command for an array using keys.
