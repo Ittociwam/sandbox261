@@ -286,8 +286,19 @@ document.getElementById("demo").innerHTML = fruits.length[0];
 function missingNo {
 var person = {firstName:"John", lastName:"Doe", age:46};
 document.getElementById("demo").innerHTML = person["firstName"];
+//One way to pull output associative arrays - index notation.
+console.log(person.age);
+//Second way to pull out associative arrays - dot notation.
 }
 //This code asks to pull the first name out of an array 
+
+//Fun code for attribute adding in JavaScript.
+function worldHunger() {
+console.log(this.toadEye);
+}
+worldHunger.toadEye = "ribbit";
+worldHunger();
+//worldHunger was assinged toadEye which pulled "ribbit" to the output.
 
 //This is nasty code for associative arrays
 function missingNo {
