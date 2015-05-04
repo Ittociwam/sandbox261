@@ -1,0 +1,22 @@
+//SANDBOX FOR JSON
+
+//This is a clean JSON code.
+{"employees":[
+    {"firstName":"John", "lastName":"Doe"},
+    {"firstName":"Anna", "lastName":"Smith"},
+    {"firstName":"Peter", "lastName":"Jones"}
+]}
+//This code stores three arrays as an object to be pulled from in HTML.
+
+//This is another good code for JSon
+<script>
+var text = '{"name":"John Johnson","street":"Oslo West 16","phone":"555 1234567"}'
+
+var obj = JSON.parse(text);
+
+document.getElementById("demo").innerHTML =
+obj.name + "<br>" +
+obj.street + "<br>" +
+obj.phone;
+</script>
+//This code will outpute an address label with name, street, and phone number
