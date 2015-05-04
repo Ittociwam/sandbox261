@@ -52,7 +52,9 @@
 
 
                 // nasty path - only changes one of the items in the "myClassItems array"
-                // button must be clicked twice because the array updates itself after the class of the first item is changed?
+                // This code actually alters the myClassItems array.
+                // therefore the loop will not hit every item becasue once one item is 
+                // altered the loop drops it and it becomes 1 item smaller. 
                 var myClassItems = document.getElementsByClassName("myClass");
                 window.alert(myClassItems.length);
                 for (var i = 0; i < myClassItems.length; i++)
@@ -64,8 +66,6 @@
 
                 // nasty path - only changes center divs font style to newClass. The rest is not changed. 
                 var mydivs = document.getElementsByTagName("div");
-                //window.alert(254);
-                //window.alert(mydivs.length);
                 mydivs[0].className = "newClass";
                 mydivs[1].className = "newClass";
                 mydivs[2].className = "newClass";

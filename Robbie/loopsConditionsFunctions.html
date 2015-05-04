@@ -1,0 +1,155 @@
+<script>
+//LOOPS Sandbox
+
+//happy path loops 3 time for loop
+    for (var i = 0; i < 3; i++)
+    {
+        console.log("hello: " + i);
+    }
+
+//happy path sentinal while loop
+    var word = "";
+    while (word !== "bye")
+    {
+        word = window.prompt("enter 'bye'");
+    }
+
+//happy path - infinate loop (may not be desired result)
+//for( ;;)
+//{
+//	console.log("infinate loop?");
+//}
+
+    var a = 10;
+    var b = 20;
+// nasty path - uses undefined variable
+    try {
+        do
+        {
+            c *= b;
+            console.log(a);
+        } while (a);
+// throws Uncaught ReferenceError: c is not defined
+    }
+    catch (e) {
+
+    }
+
+//happy path - you can leave out incrementing and
+// cover it in the body of the loop
+    for (var i = 0; i < 3; )
+    {
+        console.log(++i);
+    }
+
+    var stuff = ["thing1", "thing2", "thing3"];
+
+//nasty path - index -1 is undefined
+    for (var i = -1; i < stuff.length; i++)
+    {
+        console.log(stuff[i]);
+    }
+
+//nasty path - nothing happens
+    for (var i = "a"; i < stuff.length; i++)
+    {
+        console.log(stuff[i]);
+    }
+
+
+//CONDITIONAL STATEMENTS
+
+    var q = 8;
+    var w = 8;
+    var e = "asd";
+    var r = 3;
+    var t = 1.2;
+    var y = -9;
+
+//happy path - this works fine
+    if (q == w)
+    {
+        console.log("true!");
+    }
+
+// nasty path - does not equal true
+    if (q == w == q == w == 8)
+    {
+        console.log("true!")
+    }
+
+// happy path - must use && or || for multiple clauses
+    if (q == w && w == 8 && w == 8)
+    {
+        console.log("8true!")
+    }
+
+// nasty path - nested if statement must be in body 
+//if(if((t == 1.2) == (y == -9))) // throws: SyntaxError: Unexpected token if
+//{
+//    console.log("weird");
+//}
+
+// nasty path - nested if statement must be in body
+    try {
+        if (e == asd)
+        {
+            console.log("weird2");
+        }
+//throws: ReferenceError: asd is not defined
+    }
+    catch (e)
+    {
+
+    }
+
+//Note: we cannot use undefined variables in if statement clauses.
+
+// happy path - you can check to see if a value is not null
+    if (7)
+    {
+        console.log("one number condition");
+    }
+
+//FUNCTIONS / PARAMETERS
+
+//happy path - function takes parameters and returns the sum.
+    function add(q, w)
+    {
+        return q + w;
+    }
+
+    console.log(add(q, w));
+
+
+//happy path - use the arguments object to see any extra parameters.
+    function three(q, w)
+    {
+        if (arguments[2])
+        {
+            q += arguments[2];
+        }
+        return q + w;
+    }
+
+    console.log(three(q, w, 1000));
+
+//nasty path - if you try to use arguments that are not there you get not a number
+    function missing()
+    {
+        return arguments[0] + arguments[1];
+    }
+
+    console.log(missing());
+
+//nasty path - even if you have one parameter, if  you try to use one that is not
+//there you get NAN
+    function onlyone(q)
+    {
+        return arguments[0] + arguments[1];
+    }
+
+    console.log(onlyone(q));
+
+
+</script>
