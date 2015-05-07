@@ -9,14 +9,26 @@
 //This code stores three arrays as an object to be pulled from in HTML.
 
 //This is another good code for JSon
-<script>
 var text = '{"name":"John Johnson","street":"Oslo West 16","phone":"555 1234567"}'
-
 var obj = JSON.parse(text);
-
 document.getElementById("demo").innerHTML =
 obj.name + "<br>" +
 obj.street + "<br>" +
 obj.phone;
-</script>
 //This code will outpute an address label with name, street, and phone number
+
+//Good code for Stringify
+var me = {"firstName": "Robert", "lastName": "Collins", "age": "23"};
+var text = JSON.stringify(me);
+//Outputs the array as a string
+
+//Good code for Stringify
+var number = {2, 7, 6, 8, 4};
+var x = doTheMath(a, b, c, d, e);
+var pass = JSON.stringify(number, x)
+//Out put is the equation of doTheMath as JSON.stringify passes along the needed values.
+
+//Good code for Stringify
+var text = '{"name":"John Johnson", "street": "1 N Cemetery Lane", "age": "46"};
+var out = JSON.stringify (text, ["name", "age"]);
+//This code will pull from the associative array "text" and pull values "Name" and "age" out of it to make a string with the name and age.
