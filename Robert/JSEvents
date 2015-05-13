@@ -1,0 +1,53 @@
+//Good code for events using a button
+function displayAuthor() {
+document.getElementById("output").innerHTML = "Robert L Collins Jr";
+}
+//in body
+<button onclick = "displayAuthor()">Click Me</button>
+//This code displays the output assigned to function "displayAuthor()" when a button is pressed inside the HTML document.
+
+
+
+//Good code for mouseover, mouseout
+function changeColor() {
+document.getElementById("output").style.backgroundColor = "black";
+}
+function better() {
+document.getElementById("output").style.backgroundColor = "yellow";
+}
+//in the body
+<div id="output" onmouseover = "changeColor()" onmouseout = "better()">Some randome text to distinguish the div</div>
+//this makes the text black when the mouse passes over then it is yellow when the mouse is pulled off.
+
+
+//Good code for onkeydown
+function greenScreen() {
+document.getElementById("outputOne").style.backgroundColor= "green";
+}
+//in the body
+<body id="outputOne" onkeydown = "greenScreen()"></body>
+//this will turn the screen green when you press a key.
+
+
+//Good code for onload - not Working yet
+function sayHello() {
+window.alert("Hello User!");
+}
+//in body
+<p onload = "sayHello()"></p>
+//This code will make a pop up window flash hello user!
+
+
+//Good code for force
+function tellMetheForce {
+var force = touchItem.force;
+console.log("The amount of force exhibted on the screen is " + force + ".");
+}
+//This code will output how much force is being exhibited on the screen.
+
+
+//Good code for IDing touch and TouchList
+function tellTouch {
+var touch = touchList.identifiedTouch("bill");]
+console.log("You Have touched my screen!"}
+//it outputs the console.log for the ID'd screen letting you know what you did.
