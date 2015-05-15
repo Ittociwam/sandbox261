@@ -1,22 +1,20 @@
+<!DOCTYPE html>
+<html>
+<script>
 //Good code for events using a button
 function displayAuthor() {
 document.getElementById("output").innerHTML = "Robert L Collins Jr";
 }
-//in body
-<button onclick = "displayAuthor()">Click Me</button>
 //This code displays the output assigned to function "displayAuthor()" when a button is pressed inside the HTML document.
-
 
 
 //Good code for mouseover, mouseout
 function changeColor() {
-document.getElementById("output").style.backgroundColor = "black";
+document.getElementById("outputTwo").style.backgroundColor = "black";
 }
 function better() {
-document.getElementById("output").style.backgroundColor = "yellow";
+document.getElementById("outputTwo").style.backgroundColor = "yellow";
 }
-//in the body
-<div id="output" onmouseover = "changeColor()" onmouseout = "better()">Some randome text to distinguish the div</div>
 //this makes the text black when the mouse passes over then it is yellow when the mouse is pulled off.
 
 
@@ -24,30 +22,40 @@ document.getElementById("output").style.backgroundColor = "yellow";
 function greenScreen() {
 document.getElementById("outputOne").style.backgroundColor= "green";
 }
-//in the body
-<body id="outputOne" onkeydown = "greenScreen()"></body>
 //this will turn the screen green when you press a key.
 
 
-//Good code for onload - not Working yet
-function sayHello() {
-window.alert("Hello User!");
-}
-//in body
-<p onload = "sayHello()"></p>
-//This code will make a pop up window flash hello user!
-
-
-//Good code for force
-function tellMetheForce {
+//Good code for force - mobile devices only
+function tellMeTheForce() {
 var force = touchItem.force;
 console.log("The amount of force exhibted on the screen is " + force + ".");
+return = force;
 }
 //This code will output how much force is being exhibited on the screen.
 
 
-//Good code for IDing touch and TouchList
-function tellTouch {
+//Good code for IDing touch and TouchList - mobile devices only
+function tellTouch() {
+var for = tellMeTheForce();
 var touch = touchList.identifiedTouch("bill");]
-console.log("You Have touched my screen!"}
-//it outputs the console.log for the ID'd screen letting you know what you did.
+if (for >= 0.5){
+console.log("You Have touched Bill!");
+}
+}
+//it outputs the console.log for the ID'd screen letting you know what you did. Commands to call it include touchstart, touchmove, touchend, etc.
+</script>
+
+
+
+
+
+<body id="outputOne" onkeydown = "greenScreen()">
+<button onclick = "displayAuthor()">Click Me</button>
+<div id="outputTwo" onmouseover = "changeColor()" onmouseout = "better()">
+<p id="output"></p>
+</div>
+<div id="bill" touchend = "tellTouch(force)">
+Hello! My name is Bill.
+</div>
+</body>
+</html>
