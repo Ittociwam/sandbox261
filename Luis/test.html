@@ -168,3 +168,142 @@ function countEvens() {
 	document.getElementById('display').innerHTML = evens;
 
 }
+//DOM MANIPULATION
+<!DOCTYPE html>
+<html>
+<body>
+
+<ul id="myList">
+  <li>Coffee</li>
+  <li>Tea</li>
+</ul>
+
+<p>Click the button to append an item to the end of the list.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    var node = document.createElement("LI");
+    var node2 = document.createElement("LI");
+    var newItem = document.createElement("LI");
+    var textnode3 = document.createTextNode("Lemonade");
+    var textnode2 = document.createTextNode("Ice");
+    var textnode = document.createTextNode("Water");
+
+    newItem.appendChild(textnode3);
+    node2.appendChild(textnode2);
+    node.appendChild(textnode);
+    
+    document.getElementById("myList").appendChild(node2);
+    document.getElementById("myList").appendChild(node);
+
+    var list = document.getElementById("myList");
+
+    list.insertBefore(newItem, list.childNodes[0]);
+}
+
+
+// Bad Path Appended node twice it was only water was output
+function myFunction() {
+    var node = document.createElement("LI");
+    var node2 = document.createElement("LI");
+    var newItem = document.createElement("LI");
+    var textnode3 = document.createTextNode("Lemonade");
+    var textnode2 = document.createTextNode("Ice");
+    var textnode = document.createTextNode("Water");
+
+    newItem.appendChild(textnode3);
+    node2.appendChild(textnode2);
+    node.appendChild(textnode);
+    
+    document.getElementById("myList").appendChild(node2);
+    document.getElementById("myList").appendChild(node);
+
+    var list = document.getElementById("myList");
+
+    list.insertBefore(newItem, list.childNodes[3]);
+
+
+//created a second list item but did not enter the item in the list item
+function myFunction() {
+    var node = document.createElement("LI");
+    var node2 = document.createElement("LI");
+    var textnode2 = document.createTextNode("Ice");
+    var textnode = document.createTextNode("Water");
+    node2.appendChild(textnode2);
+    node.appendChild(textnode);
+    document.getElementById("myList").appendChild(node2);
+    document.getElementById("myList").appendChild(node);
+
+
+//Bad Path tried to get document by wrong name inserts the appended nodes but not the insert before
+function myFunction() {
+    var node = document.createElement("LI");
+    var node2 = document.createElement("LI");
+    var newItem = document.createElement("LI");
+    var textnode3 = document.createTextNode("Lemonade");
+    var textnode2 = document.createTextNode("Ice");
+    var textnode = document.createTextNode("Water");
+
+    newItem.appendChild(textnode3);
+    node2.appendChild(textnode2);
+    node.appendChild(textnode);
+    
+    document.getElementById("myList").appendChild(node2);
+    document.getElementById("myList").appendChild(node);
+
+    var list = document.getElementById("Sheila");
+
+    list.insertBefore(newItem, list.childNodes[7]);
+
+//Bad Path Will not insert it if you try to insert the "newItem"
+function myFunction() {
+    var node = document.createElement("LI");
+    var node2 = document.createElement("LI");
+    var newItem = document.createElement("LI");
+    var textnode3 = document.createTextNode("Lemonade");
+    var textnode2 = document.createTextNode("Ice");
+    var textnode = document.createTextNode("Water");
+
+    newItem.appendChild(textnode3);
+    node2.appendChild(textnode2);
+    node.appendChild(textnode);
+    
+    document.getElementById("myList").appendChild(node2);
+    document.getElementById("myList").appendChild(node);
+
+    var list = document.getElementById("myList");
+
+    list.insertBefore("newItem", list.childNodes[0]);
+
+//Bad Path First getElementbyId(no quotations) does not pass any of them.
+function myFunction() {
+    var node = document.createElement("LI");
+    var node2 = document.createElement("LI");
+    var newItem = document.createElement("LI");
+    var textnode3 = document.createTextNode("Lemonade");
+    var textnode2 = document.createTextNode("Ice");
+    var textnode = document.createTextNode("Water");
+
+    newItem.appendChild(textnode3);
+    node2.appendChild(textnode2);
+    node.appendChild(textnode);
+    
+    document.getElementById(myList).appendChild(node2);
+    document.getElementById(myList).appendChild(node);
+
+    var list = document.getElementById("myList");
+
+    list.insertBefore("newItem", list.childNodes[0]);
+
+}
+
+
+</script>
+
+
+
+</body>
+</html>
+
