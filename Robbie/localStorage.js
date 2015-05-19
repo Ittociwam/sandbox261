@@ -94,6 +94,15 @@ var strNum = localStorage[75];
 
 console.log(strNum); 
 
+//happy path - storing an array with different data types
+var names = ["Bob", "Tim", "Jerry", "Alice", 5, 44, 345];
+
+localStorage["names"] = JSON.stringify(names);
+
+
+var myNames = JSON.parse(localStorage.getItem("names"));
+console.log(myNames);
+
 // nasty path - I think json does not like this type of associated array
 var car = [];
 
@@ -112,7 +121,7 @@ var myCar = JSON.parse(retrivedCarString);
 
 console.log(myCar);
 
-// nasty path - associative array objects must be declaired as follows
+// happy path - associative array objects must be declaired as follows
 var car = new Object();
 
 car["wheels"] = 4;
