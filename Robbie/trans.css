@@ -1,0 +1,19 @@
+
+#myDiv {
+    background: blue;
+    width: 200px;
+    height: 200px;
+}
+
+#div2 {
+    background: yellow;
+    width: 200px;
+    height: 200px;
+}
+
+#div3 {
+    background: orange;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}

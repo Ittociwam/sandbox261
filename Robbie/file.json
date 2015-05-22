@@ -1,0 +1,42 @@
+{
+    "coord": {
+        "lon": -111.79,
+        "lat": 43.83
+    },
+    "sys": {
+        "message": 0.0092,
+        "country": "US",
+        "sunrise": 1432122955,
+        "sunset": 1432176691
+    },
+    "weather": [{
+            "id": 500,
+            "main": "Rain",
+            "description": "light rain",
+            "icon": "10d"
+        }],
+    "base": "stations",
+    "main": {
+        "temp": 283.951,
+        "temp_min": 283.951,
+        "temp_max": 283.951,
+        "pressure": 837.8,
+        "sea_level": 1026.74,
+        "grnd_level": 837.8,
+        "humidity": 94
+    },
+    "wind": {
+        "speed": 3.12,
+        "deg": 184.501
+    },
+    "clouds": {
+        "all": 68
+    },
+    "rain": {
+        "3h": 1.05
+    },
+    "dt": 1432152669,
+    "id": 5605242,
+    "name": "Rexburg",
+    "cod": 200
+}
