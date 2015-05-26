@@ -28,8 +28,13 @@ function alterDiv() {
     ele2.style.width = "400px";
     ele2.style.background = "green";
     
+    // nasty path - div will not slowly transition when it is absolute in css
    var ele3 = document.getElementById("div3");
+   ele3.style.transition = "left 2s linear 1s";
+   ele3.style.left = "194px";
    
+   // nasty path - div will not slowly transition when it is absolute in css
+   var ele3 = document.getElementById("div3");
    ele3.style.transition = "left 2s linear 1s";
    ele3.style.left = "194px";
 }

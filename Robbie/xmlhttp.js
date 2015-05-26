@@ -3,7 +3,7 @@
 
 function ajaxone() {
 var xmlhttp = new XMLHttpRequest();
-var url = "http://api.openweathermap.org/data/2.5/weather?q=Rexburg,us&units=imperial";
+var url = "http://api.openweathermap.org/data/2.5/weather?q=Spokane,us&units=imperial";
 
 xmlhttp.onreadystatechange = function () {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
