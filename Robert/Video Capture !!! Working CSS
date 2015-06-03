@@ -1,0 +1,34 @@
+body 	{background-color: tan;
+		color: green;
+		}
+
+.first {text-align: center;
+			opacity: 1;
+			transition: opacity .25s ease-in-out;
+			-webkit-transition: opacity .25s ease-in-out;
+			-moz-transition: opacity .25s ease-in-out;
+			}
+			
+.first:hover {opacity: 0.5;}
+
+
+.lyrics {text-align: center;
+			opacity: 1;
+			animation: fadeIn 15s;}
+
+@-webkit-keyframes fadeIn {
+	from {opacity: 0;}
+	to	 {opacity:1;}
+
+#growth {height: 100px;
+		width: 100px;
+		background: url("screen_shot.jpg");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		}
+		
+video {
+  background: #222;
+  margin: 0 0 20px 0;
+  width: 100%;
+}
