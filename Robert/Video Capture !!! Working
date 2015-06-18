@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AppDesignTest5</title>
+<link href="cssDoc.css" rel = "stylesheet" type = "text/css">
+
+</head>
+
+<body>
+
+    <video autoplay></video>
+    <br />
+    <button type="button" onclick="runVid()">Get User Media</button>
+    
+<script>
+//this function is used to keep the browser from pulling the video up without the user's call.
+function runVid() {
+//this pulls in the video tag and saves it in the browser
+var video = document.querySelector('video');
+var constraints = {
+  audio: false,
+  video: true
+};
+
+//This asks for permission to access the camera from the user, without it you cannot run the rest of the program!
+navigator.getUserMedia = navigator.getUserMedia ||
+    navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+
+//this function runs to make sure the camera will work, it should as all computers have the ability now, but if it doesn't it displays the output message for an error.
+function successCallback(stream) {
+  window.stream = stream; // stream available to console
+  if (window.URL) {
+    video.src = window.URL.createObjectURL(stream);
+  } else {
+    video.src = stream;
+  }
+}
+
+function errorCallback(error) {
+  console.log('navigator.getUserMedia error: ', error);
+}
+
+navigator.getUserMedia(constraints, successCallback, errorCallback);
+//in Google Chrome, YOU CANNOT DO THIS LOCALLY! Google Chrome blocks any use of getUserMedia with local files in order to get around this either upload to a web server or use firefox as your tester. This can be read about in greater detail at the following link: (http://stackoverflow.com/questions/13723699/chrome-getusermedia-not-requesting-permission-locally)
+}
+</script>
+
+</body>
+</html>
