@@ -1,0 +1,8 @@
+.item{
+	background-color: grey;
+	height: 40px;
+	overflow: hidden;
+	transition: height 1.5s;
+}
+
+
