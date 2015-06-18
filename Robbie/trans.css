@@ -17,3 +17,20 @@
     height: 200px;
     position:relative
 }
+
+#div4{
+    background: yellow;
+    height: 30px;
+    width: 30px;
+    transition: width 2s, height3s, background-color, 1.5s;
+}
+
+#div5{
+    height: 0px;
+    width: 0px;
+    border-top: 35px solid transparent;
+    border-bottom: 35px solid transparent;
+    border-right: 70px solid green;
+    transition: 1s ease-in-out;
+
+}
